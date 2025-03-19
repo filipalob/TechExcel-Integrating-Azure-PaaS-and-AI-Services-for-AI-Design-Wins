@@ -1,6 +1,6 @@
 name: API Deployment
 env:
-  imageName: "${{ secrets.ACR_LOGIN_SERVER }}/techexcel/csapi:${{github.run_number}}"
+  imageName: "crma7emyr2z7r7k.azurecr.io/techexcel/csapi:${{github.run_number}}"
   appName: app-${{ vars.APP_PREFIX }}-api
   appPath: ./src/ContosoSuitesWebAPI
 on:
@@ -34,9 +34,6 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-
-    - name: Log Image Name
-      run: echo "Image Name: ${{ env.imageName }}" 
 
     - name: Docker Login
       # You may pin to the exact commit or the version.
