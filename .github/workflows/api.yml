@@ -35,9 +35,6 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Log Image Name
-      run: echo "Image Name: ${{ env.imageName }}" 
-
     - name: Docker Login
       # You may pin to the exact commit or the version.
       # uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
